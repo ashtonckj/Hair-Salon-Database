@@ -1,0 +1,8 @@
+create table outlets (
+outlet_id		varchar(6) not null,
+outlet_name		varchar(50) not null,
+outlet_location	varchar(25) not null,
+outlet_state	varchar(25) not null,
+outlet_phone	varchar(10) not null,
+primary key (outlet_id)
+);

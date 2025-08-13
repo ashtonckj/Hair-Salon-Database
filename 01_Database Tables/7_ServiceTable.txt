@@ -1,0 +1,8 @@
+create table service(
+service_id		varchar(4) not null,
+service_name	varchar(25) not null,
+service_desc	varchar(50)not null,
+service_price	number(5,2),
+service_duration 	number(3),
+primary key(service_id)
+);

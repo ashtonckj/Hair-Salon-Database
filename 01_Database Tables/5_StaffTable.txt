@@ -1,0 +1,14 @@
+create table staff (
+	staff_id 		varchar(5) not null,
+	staff_name		varchar(25) not null,
+	staff_birth		date,
+	staff_gender	char(1),
+	staff_phone		varchar(11),
+	staff_email		varchar(40),
+	staff_address	char(50),
+	outlet_id		varchar(6),
+primary key(staff_id),
+foreign key(outlet_id) references outlets(outlet_id),
+constraint chk_staff_email check (REGEXP_LIKE(staff_email,'^[a-zA-Z]\w+@(\S+)$')),
+constraint chk_staff_gender check (UPPER(staff_gender) in ('M','F'))
+);

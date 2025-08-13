@@ -1,0 +1,9 @@
+create table product (
+pro_id	varchar(5)	not null,
+pro_name	varchar(65)	not null,
+pro_desc	varchar(40),
+pro_qty	number(4)	not null,
+pro_volume	number(5),	
+pro_UOM	varchar(7)	not null,
+primary key(pro_id)
+);

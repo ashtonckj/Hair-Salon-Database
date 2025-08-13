@@ -1,0 +1,8 @@
+create table Payment (
+payment_id		varchar(5) not null,
+total_price 	number(7) not null,
+total_paid    	number(7) not null,
+payment_method	varchar(20) not null,
+payment_discount	number(7),
+primary key(payment_id)
+);
