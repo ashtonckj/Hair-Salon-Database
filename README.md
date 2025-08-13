@@ -1,4 +1,6 @@
 # SheepMe Salon Database Project
+> **Note:** This project is part of an academic assignment.  
+> The organisation, names, locations, and details in the background story are entirely fictional.
 
 ## 1. Organisation Background
 
