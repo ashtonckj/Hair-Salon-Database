@@ -67,7 +67,7 @@ The salon operates with professional hairstylists and beauticians, offering both
 
 ## 4. ERD Diagram
 
-*(Insert ERD images here)*
+<img width="909" height="935" alt="image" src="https://github.com/user-attachments/assets/8a4af8ad-42da-47fe-9ea9-bcb46c10359c" />
 
 ---
 
