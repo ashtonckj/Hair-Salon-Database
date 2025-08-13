@@ -1,0 +1,5 @@
+SELECT s.staff_name AS “Staff Name”, COUNT(ad.apt_code) AS “Staff Service Count”
+FROM Staff s JOIN Appointment_details ad ON s.staff_id = ad.staff_id
+GROUP BY s.staff_id,s.staff_name
+HAVING COUNT(DISTINCT ad.apt_code) > 4
+ORDER BY “Staff Service Count” DESC;

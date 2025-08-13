@@ -1,0 +1,24 @@
+SET LINESIZE 140
+SET PAGESIZE 300
+ACCEPT enter_sdate CHAR FORMAT 'A13' PROMPT ' Enter the start date (DD-MMM-YYYY): '
+ACCEPT enter_edate CHAR FORMAT 'A13' PROMPT ' Enter the end date (DD-MMM-YYYY): '
+
+TTITLE CENTER 'Outlet Performance by Outlet Branch and State 'SKIP 1 -
+  	LEFT 'Outlet Performance Between ' &enter_sdate' and '&enter_edate -
+  	RIGHT 'Page No: ' FORMAT 999 SQL.PNO SKIP 1 -
+  	LEFT ===================================================================================================================================================
+COLUMN "Outlet Branch" FORMAT A50
+COLUMN "Outlet Location" FORMAT A25
+COLUMN "Outlet State" FORMAT A25
+COLUMN "Total Appointment" FORMAT A25
+SELECT o.outlet_name AS "Outlet Branch", 
+o.outlet_location AS "Outlet Location", 
+o.outlet_state AS "Outlet State", 
+COUNT(DISTINCT s.staff_id) AS "Staff Count",
+COUNT(ad.apt_code) AS "Total Appointments"
+FROM appointment_details ad JOIN staff s ON ad.staff_id = s.staff_id 
+JOIN appointment a ON a.apt_code = ad.apt_code
+JOIN outlets o ON s.outlet_id = o.outlet_id
+WHERE a.apt_date BETWEEN '&enter_sdate' AND '&enter_edate'
+GROUP BY o.outlet_name, o.outlet_location, o.outlet_state
+ORDER BY COUNT(ad.apt_code) DESC, COUNT (s.staff_id) DESC;

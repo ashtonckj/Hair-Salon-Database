@@ -1,0 +1,26 @@
+SET LINESIZE 80
+SET PAGESIZE 50
+ACCEPT pro_id CHAR FORMAT 'A5' PROMPT 'Enter Product ID > '
+
+TTITLE CENTER 'Service Details for Product: &pro_id' SKIP 1 -
+LEFT 'Product Services Report' SKIP 1 -
+LEFT '======================================================================'
+COLUMN "Product ID" FORMAT A12 HEADING "Product ID"
+COLUMN "Service ID" FORMAT A12 HEADING "Service ID"
+COLUMN "Service Name" FORMAT A25 HEADING "Service Name"
+COLUMN "Service Price (RM)" FORMAT 9990.99 HEADING "Service Price (RM)"
+BREAK ON "Product ID" SKIP 1
+COMPUTE SUM LABEL 'Total Price (RM)' OF "Service Price (RM)" ON "Product ID"
+SELECT 
+    p.pro_id AS "Product ID",
+    s.service_id AS "Service ID",
+    s.service_name AS "Service Name",
+    s.service_price AS "Service Price (RM)"
+FROM 
+    Service s
+    JOIN Product_service ps ON s.service_id = ps.service_id
+    JOIN Product p ON ps.pro_id = p.pro_id
+WHERE 
+    p.pro_id = '&pro_id'
+ORDER BY 
+    p.pro_id, s.service_id;

@@ -1,0 +1,7 @@
+SET PAGESIZE 120;
+
+SELECT s.service_name AS "Service Name", COUNT(ad.apt_code) AS "Service Called Frequency"
+FROM Service s JOIN  Appointment_details ad ON s.service_id = ad.service_id
+GROUP BY s.service_id, s.service_name
+HAVING COUNT(ad.apt_code) > 9
+ORDER BY "Service Called Frequency" DESC;

@@ -1,0 +1,30 @@
+SET LINESIZE 105
+SET PAGESIZE 300
+ACCEPT customer_id CHAR FORMAT 'A5' PROMPT 'Enter the Customer ID > '
+
+TTITLE CENTER 'SHEEPME SALON CUSTOMER TOTAL SPENDING DETAILS' SKIP 1 -
+  	LEFT 'Total Spending Details for Customer: ' &customer_id -
+  	RIGHT 'Page No: ' FORMAT 999 SQL.PNO SKIP 1 -
+  	LEFT =========================================================================================================
+COLUMN "Customer ID" FORMAT A11
+COLUMN "Member Status" FORMAT A15
+COLUMN "Appointment Code" FORMAT A16
+COLUMN "Appointment Date" FORMAT A27
+COLUMN "Service ID" FORMAT A11
+COLUMN "Service Price (RM)" FORMAT 999,999.99 JUSTIFY RIGHT WIDTH 25
+BREAK ON "Customer ID" ON "Member Status" ON "Appointment Code" SKIP 2 ON "Appointment Date" SKIP 1
+COMPUTE SUM LABEL 'Total Price for Appointment' OF "Service Price (RM)" ON "Appointment Date"
+COMPUTE SUM LABEL 'Total Spent' OF "Service Price (RM)" ON “Customer ID”
+SELECT c.cust_id AS "Customer ID",
+	c.member_status AS "Member Status",
+	a.apt_code AS "Appointment Code",
+	a.apt_date AS "Appointment Date",
+	ad.service_id AS "Service ID",
+	s.service_price AS "Service Price (RM)"
+FROM customer c
+JOIN appointment a ON c.cust_id = a.cust_id
+JOIN appointment_details ad ON a.apt_code = ad.apt_code
+JOIN payment p ON ad.payment_id = p.payment_id
+JOIN service s ON ad.service_id = s.service_id
+WHERE c.cust_id = '&customer_id'
+ORDER BY c.cust_id, a.apt_date, ad.service_id;
