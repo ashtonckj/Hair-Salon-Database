@@ -2,8 +2,7 @@
 > **Note:** This project is part of an academic assignment.  
 > The organisation, names, locations, and details in the background story are entirely fictional.
 
-## 1. Organisation Background
-
+## 📖 Organisation Background
 **SheepMe** is a hair salon founded by **Mr. Lim He Ping** in 2023, with its first outlet at **TARUMT Mall, Pulau Pinang**.  
 It now operates **25 branches** across Malaysia:
 
@@ -31,7 +30,7 @@ The salon operates with professional hairstylists and beauticians, offering both
 
 ---
 
-## 2. Potential Problems / Opportunities
+## ✨ Potential Problems / Opportunities
 
 **Challenges:**
 - Mismanagement of customer appointments  
@@ -53,7 +52,7 @@ The salon operates with professional hairstylists and beauticians, offering both
 
 ---
 
-## 3. Business Rules
+## 📝 Business Rules
 
 1. A customer may schedule one or many appointments, but each appointment only belongs to one customer.  
 2. An appointment contains one or many appointment details, but each appointment detail only belongs to one appointment.  
@@ -66,13 +65,13 @@ The salon operates with professional hairstylists and beauticians, offering both
 
 ---
 
-## 4. ERD Diagram
+## 📈 ERD Diagram
 
 <img width="909" height="935" alt="image" src="https://github.com/user-attachments/assets/8a4af8ad-42da-47fe-9ea9-bcb46c10359c" />
 
 ---
 
-## 5. Entities Listing in DBDL
+## 🙋‍♂️ Entities Listing in DBDL
 
 ```plaintext
 CUSTOMER (cust_id, cust_name, cust_phone, cust_email, cust_gender, member_status)
