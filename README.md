@@ -1,10 +1,10 @@
-# SheepMe Salon Database Project
+# SheepMe Hair Salon Database Project
 > **Note:** This project is part of an academic assignment.  
 > The organisation, names, locations, and details in the background story are entirely fictional.
 
 ## 1. Organisation Background
 
-**SheepMe Salon** is a hair salon founded by **Mr. Lim He Ping** in 2023, with its first outlet at **TARUMT Mall, Pulau Pinang**.  
+**SheepMe** is a hair salon founded by **Mr. Lim He Ping** in 2023, with its first outlet at **TARUMT Mall, Pulau Pinang**.  
 It now operates **25 branches** across Malaysia:
 
 - Pulau Pinang: 5 branches  
@@ -37,18 +37,19 @@ The salon operates with professional hairstylists and beauticians, offering both
 - Mismanagement of customer appointments  
 - Inefficient staff allocation  
 - Risk of overbooking and overlapping schedules  
-- Possible decline in customer service quality
 
 **Solution:**
 - Implement a **centralized database system** to manage:
   - Customer appointments  
-  - Staff schedules  
-  - Service records  
+  - Staff and Customer informations  
+  - Product and Service records  
   - Payment details  
-- Automate routine tasks to:
-  - Reduce manual errors  
-  - Improve customer experience  
-  - Increase operational efficiency
+- Designed five **SQL queries** to help staff gain insights into business performance and operations:
+  - Customer Total Spending Details — View each customer’s total spending
+  - Service Performance by Staff — Evaluate staff performance based on services provided
+  - Outlet Performances by Branch and State — View performance across different outlets
+  - Checking Services for Specific Products — Identify which services involve specific products
+  - Most Popular Service — Determine the top-performing service
 
 ---
 
