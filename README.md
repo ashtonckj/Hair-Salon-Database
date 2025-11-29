@@ -1,31 +1,30 @@
 # SheepMe Hair Salon Database Project
-> **Note:** This project is part of an academic assignment.  
+> **Note:** This project is part of an academic assignment.
 > The organisation, names, locations, and details in the background story are entirely fictional.
 
 ## 📖 Organisation Background
-**SheepMe** is a hair salon founded by **Mr. Lim He Ping** in 2023, with its first outlet at **TARUMT Mall, Pulau Pinang**.  
+**SheepMe** is a hair salon founded by **Mr. Lim He Ping** in 2023, with its first outlet at **TARUMT Mall, Pulau Pinang**.
 It now operates **25 branches** across Malaysia:
 
-- Pulau Pinang: 5 branches  
-- Kuala Lumpur: 7 branches  
-- Melaka: 3 branches  
-- Johor Bahru: 5 branches  
-- Pahang: 5 branches  
+- Pulau Pinang: 5 branches
+- Kuala Lumpur: 7 branches
+- Melaka: 3 branches
+- Johor Bahru: 5 branches
+- Pahang: 5 branches
 
-**Slogan:** *"SheepMe, Your Best Choice"*  
+**Slogan:** *"SheepMe, Your Best Choice"*
 
 **Services provided:**
-- Hair washing  
-- Haircuts  
-- Hair colouring  
-- Hair treatment  
-- Beauty treatments
+- Hair washing
+- Haircuts
+- Hair colouring
+- Hair treatment
 
-The salon operates with professional hairstylists and beauticians, offering both appointments and walk-ins. Appointments can be made via phone or in person. A centralized appointment management system is used to:
-- Avoid scheduling conflicts  
-- Assign staff efficiently  
-- Manage customer profiles (phone, gender, membership status)  
-- Track payments and pricing  
+The salon operates with professional hairstylists and beauticians, offering both appointments and walk-ins. Appointments can be made via phone or in person. A centralised appointment management system is used to:
+- Avoid scheduling conflicts
+- Assign staff efficiently
+- Manage customer profiles (phone, gender, membership status)
+- Track payments and pricing
 - Maintain product inventory for services
 
 ---
@@ -33,16 +32,16 @@ The salon operates with professional hairstylists and beauticians, offering both
 ## ✨ Potential Problems / Opportunities
 
 **Challenges:**
-- Mismanagement of customer appointments  
-- Inefficient staff allocation  
-- Risk of overbooking and overlapping schedules  
+- Mismanagement of customer appointments
+- Inefficient staff allocation
+- Risk of overbooking and overlapping schedules
 
 **Solution:**
 - Implement a **centralized database system** to manage:
-  - Customer appointments  
-  - Staff and Customer informations  
-  - Product and Service records  
-  - Payment details  
+  - Customer appointments
+  - Staff and Customer informations
+  - Product and Service records
+  - Payment details
 - Designed five **SQL queries** to help staff gain insights into business performance and operations:
   - Customer Total Spending Details — View each customer’s total spending
   - Service Performance by Staff — Evaluate staff performance based on services provided
@@ -54,14 +53,14 @@ The salon operates with professional hairstylists and beauticians, offering both
 
 ## 📝 Business Rules
 
-1. A customer may schedule one or many appointments, but each appointment only belongs to one customer.  
-2. An appointment contains one or many appointment details, but each appointment detail only belongs to one appointment.  
-3. A payment may contain one or many appointment details, but each appointment detail only belongs to one payment.  
-4. An outlet may employ one or many staff, but each staff only belongs to one outlet.  
-5. A staff may be assigned to one or many appointment details, but each appointment detail only belongs to one staff.  
-6. A product may be used in one or many product services, but each product service only belongs to one product.  
-7. A service may have one or many product services, but each product service only belongs to one service.  
-8. A service may be assigned to one or many appointment details, but each appointment detail only belongs to one service.  
+1. A customer may schedule one or many appointments, but each appointment only belongs to one customer.
+2. An appointment contains one or many appointment details, but each appointment detail only belongs to one appointment.
+3. A payment may contain one or many appointment details, but each appointment detail only belongs to one payment.
+4. An outlet may employ one or many staff, but each staff only belongs to one outlet.
+5. A staff may be assigned to one or many appointment details, but each appointment detail only belongs to one staff.
+6. A product may be used in one or many product services, but each product service only belongs to one product.
+7. A service may have one or many product services, but each product service only belongs to one service.
+8. A service may be assigned to one or many appointment details, but each appointment detail only belongs to one service.
 
 ---
 
